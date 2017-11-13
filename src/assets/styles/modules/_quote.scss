@@ -1,0 +1,305 @@
+
+.quote__container {
+  position: relative;
+  perspective: 1200px;
+}
+
+.quote {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+  transition: all .4s cubic-bezier(.77, 0, .175, 1);
+}
+
+.quote__nav {
+  position: absolute;
+  width: 3em;
+  right: 1em;
+  z-index: $zIndex--4;
+}
+
+.quote__nav .quote__item {
+  width: 1.5em;
+  height: 9px;
+  margin: 2em 0;
+  position: relative;
+  display: block;
+  letter-spacing: 0;
+  color: $color-porcelain;
+  opacity: .6;
+  border: 0;
+  background: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    &:hover,
+    &:focus {
+      border: 0;
+      outline: none;
+      color: $color-white;
+      opacity: .85;
+    }
+}
+
+.quote__nav .router-link-active {
+  color: $color-white;
+  opacity: 1;
+}
+
+.quote__item span {
+  font-size: 1.3rem;
+  transition: opacity .3s ease-in;
+}
+
+.quote__arrows {
+  display: none;
+}
+
+.quote__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.quote__content:before,
+.quote__content:after {
+  display: table;
+  content: " ";
+}
+
+.quote__content:after {
+  clear: both;
+}
+
+.quote__image,
+.quote__text {
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+
+.quote__image {
+  width: 35%;
+  height: 100%;
+  left: 65%;
+  z-index: $zIndex--1;
+}
+
+.quote__image:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  opacity: 0;
+}
+
+.quote__image img {
+  position: absolute;
+  left: -5em;
+  top: 14%;
+  box-shadow: -2px -1px 5px $color-greyDark;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14),
+              0 1px 10px 0 rgba(0, 0, 0, .12),
+              0 2px 4px -1px rgba(0, 0, 0, .4);
+}
+
+.quote__image.vertical img {
+  width: 300px;
+  height: 400px;
+}
+
+.quote__image.horizontal img {
+  width: 400px;
+  height: 300px;
+}
+
+.quote__text {
+  background-color: $color-white;
+  padding: 8% 12% 2% 11%;
+  font-size: 1.03rem;
+  height: inherit;
+  width: 65%;
+  right: 35%;
+}
+
+.quote__author {
+  margin: 2em 0;
+  color: $color-aubergine;
+}
+
+.quote__theme {
+  position: absolute;
+  left: 2.5em;
+  bottom: 1.7em;
+  width: 36px;
+  height: 36px;
+  z-index: $zIndex--3;
+  cursor: pointer;
+}
+
+.quote__theme svg {
+  stroke: $color-aubergine;
+  fill: $color-aubergine;
+    &:hover {
+      stroke: $color-lilac;
+    }
+}
+
+// Theme Dark
+.quote__container.theme-dark .quote__theme svg {
+  stroke: $color-porcelain;
+  fill: $color-porcelain;
+    &:hover {
+      stroke: $color-lilac;
+    }
+}
+
+.quote__container.theme-dark .ws-logo {
+  color: $color-white;
+    &:hover {color: $color-aubergine;}
+}
+
+.quote__container.theme-dark .quote__text {
+  background-color: $color-dark;
+  color: $color-white;
+}
+
+.quote__container.theme-dark .quote__author {
+  color: $color-porcelain;
+}
+
+.quote__container.theme-dark .quote__image:before {
+  background-color: $color-lilacDim;
+  opacity: .7;
+}
+
+.quote__container.theme-dark .quote__image img {
+  box-shadow: -7px 2px 15px darken($color-dark, 3%);
+}
+
+@media screen and (max-width: $mq-large) {
+  .quote__image {
+    width: 30%;
+    left: 0;
+  }
+
+  .quote__text {
+    width: 70%;
+    right: 0;
+    padding: 10% 13% 2% 8%;
+    overflow-y: scroll;
+  }
+
+  .quote__image img {
+    left: auto;
+    right: -2em;
+  }
+
+  .quote__nav .quote__item {
+    margin: 1.6em 0;
+    color: $color-dark;
+      &:hover,
+      &:focus {
+        color: $color-lilac;
+      }
+  }
+
+  .quote__item span {
+    font-size: 1rem;
+  }
+
+  .quote__theme {
+    right: 2.2em;
+    left: auto;
+  }
+}
+
+@media screen and (max-width: $mq-medium) {
+  .quote__nav {
+    display: none;
+  }
+
+  .quote__arrows {
+    position: absolute;
+    bottom: 2em;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 0 2em;
+    z-index: $zIndex--5;
+      &:hover {
+        color: $color-aubergine;
+      }
+  }
+
+  .quote__arrows a:hover {
+    color: $color-porcelain;
+  }
+
+  .quote__arrows a:last-child {
+    float: right;
+  }
+
+  .quote {
+    overflow-y: scroll;
+  }
+
+  .quote__image {
+    height: 380px;
+    width: 100%;
+    left: 0;
+  }
+
+  .quote__text {
+    height: auto;
+    padding-top: 5%;
+  }
+
+  .quote__image img {
+    position: static;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .quote__image.vertical img {
+    height: 350px;
+  }
+
+  .quote__image.vertical img ,
+  .quote__image.horizontal img {
+    margin-top: 5%;
+  }
+
+  .quote__text.vertical,
+  .quote__text.horizontal {
+    right: 0;
+    width: 100%;
+    min-height: 300px;
+    border-radius: 0;
+    z-index: $zIndex--2;
+  }
+
+  .quote__theme {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $mq-small) {
+  .quote__image.vertical img ,
+  .quote__image.horizontal img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+  }
+
+  .quote-text {
+    padding: 4% 13%;
+  }
+
+  .quote__arrows {
+    background-color: $color-dark;
+  }
+}

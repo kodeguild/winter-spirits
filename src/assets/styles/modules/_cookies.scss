@@ -1,0 +1,275 @@
+
+.cookies__container h2 {
+  position: absolute;
+  top: 1.5em;
+  width: 400px;
+  text-align: center;
+}
+
+.cookie__wrapper {
+  position: relative;
+  height: 0;
+  top: 10em;
+  left: 7em;
+  background-color: transparent;
+  color: $color-white;
+  width: 350px;
+  padding: 0 1em;
+  text-align: center;
+  line-height: 1.4;
+  transition: height .4s ease-in-out, transform .4s cubic-bezier(.175, .885, .32, 1.275), padding .4s cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.cookie__wrapper.revealed {
+  height: auto;
+  transform: translateY(-4em);
+  padding: 1.2em 1em;
+  box-shadow: -1px -1px 9px 1px darken($color-lilacDark, 10%);
+}
+
+.cookie__text {
+  opacity: 0;
+}
+
+.cookies__jar {
+  position: absolute;
+  bottom: 17%;
+  background-color: $color-blue;
+  width: 300px;
+  height: 400px;
+  background: transparent;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .34),
+              0  6px 30px 5px rgba(0, 0, 0, .32),
+              0  8px 10px -5px rgba(0, 0, 0, .7);
+  border: 16px solid $color-aubergine;
+}
+
+.cookies__jar:before {
+  content: "";
+  position: absolute;
+  top: -1.8em;
+  left: -1.8em;
+  background: $color-blue url(../images/cookie-jar.jpg) top left no-repeat;
+  width: inherit;
+  height: inherit;
+  z-index: $zIndex-1;
+    }
+
+.cookie__chooser {
+  position: absolute;
+  bottom: 30px;
+}
+
+.cookie__number,
+.cookie__submit {
+  width: 3em;
+  height: 3em;
+  text-align: center;
+  font-size: 1.2rem;
+  border: none;
+  vertical-align: middle;
+  box-shadow: 2px 3px 5px $color-dark;
+}
+
+.cookie__submit,
+.cookie__random {
+  cursor: pointer;
+}
+
+.cookie__number {
+  background-color: rgba($color-lilacDark, .8);
+  color: $color-white;
+  border: 10px solid $color-white;
+    &:hover,
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+}
+
+.cookie__submit {
+  background: $color-lilacDark;
+}
+
+.cookie__submit > svg {
+  fill: $color-porcelain;
+  vertical-align: middle;
+}
+
+.cookie__submit:hover > svg {
+  fill: $color-blue;
+}
+
+.cookie__showNum {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: rgba($color-aubergine, .8);
+  color: $color-white;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 1.3rem;
+}
+
+.cookie__random {
+  position: absolute;
+  top: 40%;
+  right: -55px;
+  width: 110px;
+  height: 110px;
+  transform: rotate(45deg);
+  background-color: $color-blue;
+  background-image: linear-gradient(to left top, $color-lilac, #0094ff, $color-blue);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14),
+              0 1px 5px 0 rgba(0, 0, 0, .12),
+              0 3px 1px -2px rgba(0, 0, 0, .2);
+}
+
+.cookie__random span {
+  display: block;
+  padding-left: 1em;
+  margin-top: 2.2em;
+  transform-origin: 50%  53%;
+  transform: rotate(-45deg) perspective(1px);
+}
+
+.cookie__tip {
+  position: absolute;
+  color: $color-white;
+  bottom: 2em;
+  font-size: 1.2rem;
+  z-index: $zIndex--3;
+}
+
+.fadeIn {
+  animation: fadeIn 1.5s ease both;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1; }
+}
+
+.star-rain {
+  position: absolute;
+  left: 50%;
+  bottom: 80%;
+}
+
+$a: -15;
+$b: -10;
+$c: random(12);
+
+.star {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  color: $color-lilac;
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      top: $i*8+$i*12px;
+      transform: translate(random(100) + -15px, random(50) + -25px);
+    }
+  }
+}
+
+.star.shoot {
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      animation: pop-#{$i} 2s cubic-bezier(.77, 0, .275, 1) 1 both;
+    }
+  }
+}
+
+.star:nth-child(4n+1) {
+  color: $color-blue;
+}
+
+.star:nth-child(4n+2) {
+  color: $color-yellowLight;
+}
+
+.star:nth-child(4n+3) {
+  color: $color-pinkLight;
+}
+
+@for $i from 1 through 12 {
+  @keyframes pop-#{$i} {
+    50% {
+      opacity: 1;
+      transform: translate(random(100) + 100px, random(100) + -100px);
+    }
+    80% {
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $mq-large) {
+  .cookies__jar {
+    bottom: 12%;
+  }
+}
+
+@media screen and (max-width: $mq-small) {
+  .cookies__container h2 {
+    display: none;
+  }
+
+  .cookie__wrapper {
+    top: 8.5em;
+    left: 0;
+    width: 320px;
+  }
+
+  .cookie__wrapper.revealed {
+    padding: 1em;
+  }
+
+  .cookies__jar {
+    width: 200px;
+    height: 150px;
+    border: none;
+    bottom: 17%;
+    background: transparent;
+  }
+
+  .cookies__jar:before {
+    display: none;
+  }
+
+  .cookie__chooser {
+    width: 60%;
+    text-align: center;
+    bottom: 15px;
+  }
+
+  .cookie__showNum {
+    top: 28%;
+    width: 56px;
+    height: 56px;
+    padding-top: 13px;
+  }
+
+  .cookie__random {
+    right: 0;
+    width: 70px;
+    height: 70px;
+    transform: none;
+  }
+
+  .cookie__random span {
+    transform: none;
+    margin-top: 1.1em;
+  }
+
+  .cookie__tip {
+    width: 100%;
+    text-align: center;
+    bottom: 1em;
+  }
+
+  .star {
+    display: none;
+  }
+}

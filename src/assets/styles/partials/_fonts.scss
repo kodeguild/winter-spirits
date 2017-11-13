@@ -1,0 +1,20 @@
+
+@font-face {
+  font-family: "font-primary"; // HK-Grotesk regular
+  src: url("../fonts/font-primary.woff2") format("woff2"),
+       url("../fonts/font-primary.woff") format("woff"),
+       url("../fonts/font-primary.eot"),
+       url("../fonts/font-primary.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "font-secondary"; // Intro
+  src: url("../fonts/font-secondary.woff2") format("woff2"),
+       url("../fonts/font-secondary.woff") format("woff"),
+       url("../fonts/font-secondary.eot"),
+       url("../fonts/font-secondary.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

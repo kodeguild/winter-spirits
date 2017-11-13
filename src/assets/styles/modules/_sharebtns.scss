@@ -1,0 +1,176 @@
+
+.dex-btns {
+  position: absolute;
+  top: 7em;
+  right: 16em;
+}
+
+.wo-text {
+  width: 32px;
+}
+
+.dex-btn,
+.popup button {
+  cursor: pointer;
+}
+
+.dex-btn span,
+.dex-icon {
+  vertical-align: middle;
+}
+
+.dex-btn,
+.dex-btn span {
+  font-weight: bold;
+  opacity: .85;
+}
+
+.dex-btn {
+  display: inline-block;
+  height: 32px;
+  line-height: 1.6;
+  color: $color-white;
+  text-align: center;
+  text-decoration: none;
+  font-size: .85rem;
+  margin: 0 .2em;
+  border: none;
+  padding-top: 3px;
+}
+
+.share {
+  display: inline-block;
+  max-height: 40px;
+}
+
+.share .dex-btn:not(.wo-text),
+.support:not(.wo-text) {
+  padding: 5px 14px 5px 10px;
+}
+
+.share .dex-btn:not(.wo-text) .dex-icon,
+.support:not(.wo-text) .dex-icon {
+  margin-right: 8px;
+}
+
+.dex-icon {
+  fill: $color-white;
+}
+
+.overlay,
+.hidden,
+.hidden + .popup {
+  display: none;
+}
+
+.hidden:checked + .popup {
+  position: absolute;
+  min-width: 255px;
+  margin-top: -4em;
+  padding: .5em;
+  z-index: $zIndex--3;
+  background-color: #333;
+  border-radius: .5em;
+  display: inline-block;
+}
+
+/* popup triangle */
+.hidden:checked + .popup:before {
+  content: "";
+  position: absolute;
+  bottom: -.7em;
+  height: 0;
+  width: 0;
+  border-top: .8em solid $color-aubergine;
+  border-left: .8em solid transparent;
+  border-right: .8em solid transparent;
+  z-index: $zIndex--3;
+}
+
+.popup input {
+  min-width: 190px;
+  height: 25px;
+}
+
+.popup button {
+  margin: 2.5px 0 2.5px 5px;
+  height: 28px;
+  width: 35px;
+  background-color: $color-lilac;
+  color: $color-white;
+  border: 0;
+}
+
+.popup label {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $zIndex-1;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.diaspora {
+  background-color: #141414;
+    &:hover {
+      background-color: #000000;
+    }
+}
+
+.mastodon {
+  background-color: #3088d4;
+    &:hover {
+      background-color: saturate(darken(#3088d4, 8%), 20%);
+    }
+}
+
+.hubzilla {
+  background-color: #43488a;
+    &:hover {
+      background-color: saturate(darken(#43488a, 5%), 5%);
+    }
+}
+
+.gnu_social {
+  background-color: #a22430;
+    &:hover {
+      background-color: saturate(darken(#a22430, 8%), 20%);
+    }
+}
+
+.friendica {
+  background-color: #ffb900;
+    &:hover {
+      background-color: saturate(darken(#ffb900, 5%), 15%);
+    }
+}
+
+.socialhome {
+  background-color: #4c4c4c;
+    &:hover {
+      background-color: saturate(darken(#4c4c4c, 5%), 5%);
+    }
+}
+
+@media screen and (max-width: $mq-medium) and (orientation: portrait) {
+  .dex-btns {
+    position: static;
+    display: block;
+    margin-top: 2em;
+  }
+
+  .dex-btns h5 {
+    text-align: left;
+  }
+
+  .dex-btn {
+    margin: .5em .2em;
+  }
+}
+
+@media screen and (max-width: $mq-small) {
+  .info__modal.share__modal {
+    padding: 20% 11%;
+  }
+}

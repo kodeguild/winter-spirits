@@ -1,0 +1,22 @@
+# humanstxt.org
+# The humans responsible & technology colophon
+
+# CREDITS
+  * Page Transitions - inspired by Codrops https://tympanus.net/codrops
+  * CopyTextToClipboard - by Sindresorhus https://github.com/sindresorhus/copy-text-to-clipboard
+  * Images - by Sylar http://sylar113.deviantart.com
+  * Photos - by Pixabay https://pixabay.com
+  * Audio - by @tubbers on https://freesound.org
+  * Hosted - by GitLab https://pages.gitlab.io
+
+# TEAM
+  * @Kodeguild
+
+# THANKS
+  to Tim Berners-Lee for the World Wide Web
+
+# TECHNOLOGY COLOPHON
+  Vue.js
+  Vuex
+  Sass
+  Webpack

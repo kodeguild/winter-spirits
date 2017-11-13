@@ -1,0 +1,57 @@
+
+.moveFromLeft-enter-to, .moveFromLeft-leave {
+  animation: moveFromLeft .8s cubic-bezier(.77, 0, .275, 1) backwards;
+}
+
+.moveFromLeft-enter, .moveFromLeft-leave-to {
+  transform: translateX(-100%);
+}
+
+.moveFromRight-enter-to, .moveFromRight-leave {
+  animation: moveFromRight .8s cubic-bezier(.77, 0, .275, 1) backwards;
+}
+
+.moveFromRight-enter, .moveFromRight-leave-to {
+  transform: translateX(100%);
+}
+
+.moveFromBottom-enter-to, .moveFromBottom-leave {
+  animation: moveFromBottom .8s cubic-bezier(.77, 0, .275, 1) backwards;
+}
+
+.moveFromBottom-enter, .moveFromBottom-leave-to {
+  transform: translateY(100%);
+}
+
+.moveFromTop-enter-to, .moveFromTop-leave {
+  animation: moveFromTop .7s cubic-bezier(.77, 0, .275, 1) backwards;
+}
+
+.moveFromTop-enter, .moveFromTop-leave-to {
+  opacity: 0;
+  display: none;
+}
+
+@keyframes moveFromBottom {
+  from{transform: translateY(100%);}
+}
+
+@keyframes moveFromRight {
+  from {transform: translateX(100%);}
+}
+
+@keyframes moveFromLeft {
+  from {transform: translateX(-100%);}
+}
+
+@keyframes moveFromTop {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

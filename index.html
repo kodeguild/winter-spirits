@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="content-language" content="en, ru" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <link rel="canonical" href="https://winterspirits.win">
+    <link rel="author" href="/humans.txt">
+    <meta itemprop="name" content="Winter Spirits" />
+    <meta name="description" itemprop="description" content="Winter spirits win - New Year experience">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="WinterSpirits">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/touch/android-icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="WinterSpirits">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/touch/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/touch/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/touch/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/touch/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/touch/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/touch/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/touch/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/touch/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/touch/apple-icon-180x180.png">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="msapplication-TileImage" content="/img/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#f4f4f4">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta property="og:title" content="Winter Spirits" />
+    <meta property="og:description" content="Winter spirits win: New Year experience" />
+    <meta property="og:image" content="metaimage.jpg" />
+    <title>Winter Spirits</title>
+    <style>
+      body {
+        background-color: #1e1f21;
+      }
+
+      .browserupgrade {
+        margin: .2em 0;
+        background: #ffffff;
+        color: #313037;
+        padding: .2em 0;
+      }
+
+      .no-js {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 50%;
+        background: #313037;
+        color: #ffffff;
+        text-align: center;
+        padding: .5em;
+        z-index: $zIndex--5;
+      }
+
+      @media screen and (max-width: $mq-xsmall) {
+        .no-js {
+          left: 0;
+          transform: translate(0, 0);
+          width: 100%;
+        }
+      }
+
+      /* Spinner from https://github.com/tobiasahlin/SpinKit */
+      .wandering-cubes {
+        margin: 40px auto;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top:  40%;
+        left:  50%;
+        transform: translate(-50%, -40%);
+      }
+
+      .wandering-cubes .cube {
+        background-color: #0af0ff;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-animation: wanderingCube 1.8s ease-in-out -1.8s infinite both;
+                animation: wanderingCube 1.8s ease-in-out -1.8s infinite both;
+      }
+
+      .wandering-cubes .cube2 {
+        -webkit-animation-delay: -0.9s;
+                animation-delay: -0.9s;
+      }
+
+      @-webkit-keyframes wanderingCube {
+        0% {
+          -webkit-transform: rotate(0deg);
+                  transform: rotate(0deg); }
+        25% {
+          -webkit-transform: translateX(30px) rotate(-90deg) scale(0.5);
+                  transform: translateX(30px) rotate(-90deg) scale(0.5); }
+        50% {
+          /* Hack to make FF rotate in the right direction */
+          -webkit-transform: translateX(30px) translateY(30px) rotate(-179deg);
+                  transform: translateX(30px) translateY(30px) rotate(-179deg); }
+        50.1% {
+          -webkit-transform: translateX(30px) translateY(30px) rotate(-180deg);
+                  transform: translateX(30px) translateY(30px) rotate(-180deg); }
+        75% {
+          -webkit-transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5);
+                  transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5); }
+        100% {
+          -webkit-transform: rotate(-360deg);
+                  transform: rotate(-360deg); }
+      }
+
+      @keyframes wanderingCube {
+        0% {
+          -webkit-transform: rotate(0deg);
+                  transform: rotate(0deg); }
+        25% {
+          -webkit-transform: translateX(30px) rotate(-90deg) scale(0.5);
+                  transform: translateX(30px) rotate(-90deg) scale(0.5); }
+        50% {
+          /* Hack to make FF rotate in the right direction */
+          -webkit-transform: translateX(30px) translateY(30px) rotate(-179deg);
+                  transform: translateX(30px) translateY(30px) rotate(-179deg); }
+        50.1% {
+          -webkit-transform: translateX(30px) translateY(30px) rotate(-180deg);
+                  transform: translateX(30px) translateY(30px) rotate(-180deg); }
+        75% {
+          -webkit-transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5);
+                  transform: translateX(0) translateY(30px) rotate(-270deg) scale(0.5); }
+        100% {
+          -webkit-transform: rotate(-360deg);
+                  transform: rotate(-360deg); }
+      }
+    </style>
+    <svg xmlns="https://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="icon-diaspora" viewBox="0 0 24 24">
+        <path d="M15.13 21.453l-2.172-3.033c-.58-.81-1.052-1.443-1.077-1.444-.025 0-.937 1.227-2.16 2.903-1.162 1.594-2.123 2.9-2.134 2.9-.034 0-4.193-2.93-4.203-2.962-.006-.015.935-1.395 2.09-3.07 1.154-1.672 2.1-3.065 2.1-3.097 0-.05-.375-.182-3.31-1.16-1.82-.608-3.326-1.11-3.348-1.12-.03-.01.143-.59.737-2.465.427-1.348.785-2.462.8-2.477.01-.014 1.593.492 3.514 1.125 1.922.634 3.51 1.15 3.53 1.15.018 0 .04-.032.05-.066.007-.036.024-1.67.035-3.635.014-1.962.035-3.585.047-3.605.018-.03.56-.036 2.54-.036 1.383 0 2.53.012 2.548.023.023.014.06 1.093.125 3.52.104 3.98.107 4.032.17 4.032.023 0 1.547-.51 3.383-1.132 1.837-.623 3.348-1.122 3.36-1.11.036.04 1.543 4.946 1.524 4.963-.01.01-1.542.534-3.406 1.166-2.562.87-3.39 1.16-3.396 1.196-.005.03.876 1.345 1.996 2.985 1.103 1.616 2.003 2.948 1.998 2.964-.012.035-4.14 3.075-4.175 3.075-.014.002-.537-.714-1.163-1.587v-.002z"/>
+      </symbol>
+
+      <symbol id="icon-mastodon" viewBox="0 0 24 24">
+        <path d="M23.605 10.01v10.205h-4.042v-9.907c0-2.09-.88-3.148-2.636-3.148-1.943 0-2.918 1.256-2.918 3.742v5.422H9.99v-5.42c0-2.487-.973-3.744-2.917-3.744-1.757 0-2.636 1.06-2.636 3.147v9.907H.395V10.008c0-2.085.53-3.742 1.597-4.97 1.1-1.225 2.54-1.853 4.328-1.853 2.07 0 3.635.795 4.67 2.386L12 7.26l1.007-1.69c1.036-1.59 2.604-2.385 4.67-2.385 1.79 0 3.23.63 4.33 1.854 1.066 1.225 1.597 2.883 1.597 4.97"/>
+      </symbol>
+
+      <symbol id="icon-gnu_social" viewBox="0 0 24 24">
+        <path d="M14.526 18.125l2.147-.12s.418 2.566-4.175 2.387c-2.923-.114-4.832-1.61-4.832-5.965s.537-5.07 4.653-5.25c4.115-.177 4.89 3.34 4.89 3.34h3.4s-.26-2.53-2.213-4.45c1.753-.97 1.715-2.836 1.652-4.02C19.99 2.914 17.594 0 17.036.497c-.56.5.924.986.804 3.432-.05 1.073.27 1.908-1.788 1.908-1.374 0-.805-1.223-2.536-1.223-1.018 0-1.404.65-1.55 1.186-.147-.534-.533-1.184-1.55-1.184-1.73 0-1.163 1.222-2.536 1.222-2.06 0-1.738-.835-1.79-1.91C5.97 1.484 7.453 1 6.895.5c-.555-.497-3.01 1.88-3.01 3.55 0 1.186-.066 3.06 1.68 4.028C3.91 9.694 3.58 11.98 3.612 14.008c.06 3.7 1.61 9.186 8.59 9.544 6.978.36 8.47-5.13 8.47-8.65h-7.335l1.19 3.223z"/>
+      </symbol>
+
+      <symbol id="icon-friendica" viewBox="0 0 24 24">
+        <path d="M7.525 23.347c-.847-.005-2.535-.86-2.908-3.15-.035-.216 0-15.89 0-15.89S5.2 1.086 8.01.65h11.433v6.37h-7.267v5.087h7.267v4.796h-7.267v6.445s-4.65-.002-4.65 0z"/>
+      </symbol>
+
+      <symbol id="icon-hubzilla" viewBox="0 0 24 24">
+        <path d="M20.125 1.403c1.26.622 2.423 1.818 3.03 3.11.24.578.492 1.148.44 2.49-.045 1.21-.13 1.686-.507 2.488-.998 2.13-2.962 3.554-5.205 3.7l-1.212.082-.425 1.686c-.357 1.404-.39 1.876-.39 1.876.405.43 1.325.696 1.71 1.692.525 1.015.465 2.456-.206 3.29-1.098 1.36-2.735 1.768-4.176 1.016-1.31-.688-1.997-2.39-1.588-3.88.098-.377-.016-.492-1.588-1.523L8.305 16.3l-.622.508C4.72 19.182.38 17.086.397 13.272c0-2.456 1.95-4.37 4.453-4.355 1.26 0 2.014.278 2.947 1.13l.687.622 1.523-.77 1.54-.753-.164-.54c-.23-.802-.18-2.586.098-3.487.312-1.08 1.278-2.423 2.195-3.094 1.867-1.377 4.42-1.623 6.45-.623zm-11.25 13.88l3.413 2.346s1.036-.873 2.44-.996l.874-3.71s-2.7-.874-3.465-2.77l-3.163 1.5s.748 1.868-.098 3.628z"/>
+      </symbol>
+
+      <symbol id="icon-socialhome" viewBox="0 0 24 24">
+        <path d="M8.237 8.054h7.187v9.265H8.238V8.053zm8.343 5.305h5.082v9.94H16.58v-9.94zM2.258 17.32H7.01V8.053H2.26l-.002 9.265zm13.204 5.98H2.295l.002-4.86h13.165v4.86zm1.155-15.246H21.7v4.158h-5.083V8.054zm5.955-3.216l-10.3-4.31c-.2-.138-1.42-.138-1.66 0L1.3 4.88c-.293.136-.447.454-.377.77.07.32 1.37 1.23 1.37 1.23H21.7s1.392-.997 1.392-1.38c0-.323-.222-.588-.52-.664z"/>
+      </symbol>
+    </svg>
+  </head>
+  <body class="font-pr">
+    <main id="wrapper" class="container-wrapper">
+      <!--[if lt IE 10]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to use this website.</p>
+      <![endif]-->
+      <div id="app">
+        <noscript>
+          <small class="no-js">This site is built with Vue.js. Please, enable javascript.</small>
+        </noscript>
+        <div class="wandering-cubes">
+          <div class="cube cube1"></div>
+          <div class="cube cube2"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

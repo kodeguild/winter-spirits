@@ -1,0 +1,35 @@
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3em;
+  text-align: center;
+  z-index: $zIndex--2;
+  color: $color-white;
+}
+
+.footer__menu {
+  position: absolute;
+  top: 0;
+  right: 1.1em;
+}
+
+.footer__menu a {
+  margin: 0 .8em .5em;
+}
+
+@media screen and (min-width: $mq-medium) and (max-width: $mq-large) {
+  .quote__container ~ footer .footer__menu  {
+    left: 1.1em;
+    right: auto;
+  }
+}
+
+@media screen and (max-width: $mq-small) {
+  .container:not(.cookies__container) ~ .footer {display: none;}
+}
+
+@media screen and (max-width: $mq-xsmall) {
+  .footer__menu {display: none;}
+}

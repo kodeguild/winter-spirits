@@ -1,0 +1,24 @@
+
+.font-pr {
+  font-family: "font-primary", "Segoe UI", "Open Sans", Ubuntu, Cantarell, Oxygen, "Helvetica Neue", BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+.font-sec {
+  font-family: "font-secondary", sans-serif;
+}
+
+.center-h-v {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-h {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-v {
+  top: 51%;
+  transform: translateY(-51%);
+}

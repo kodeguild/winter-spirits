@@ -1,0 +1,54 @@
+
+.share__modal {
+  height: 32%;
+  padding: 4% 11%;
+}
+
+.share__modal h5 {
+  text-align: center;
+}
+
+.share__modal .info__close {
+  top: 3em;
+}
+
+.share__link,
+.share__copy {
+  border: 0;
+  height: 38px;
+  font-size: .95rem;
+  vertical-align: bottom;
+}
+
+.share__link {
+  background-color: $color-aubergine;
+  padding: .5em .5em .7em 1.5em;
+  margin-top: 1em;
+  color: $color-white;
+  min-width: 200px;
+}
+
+.share__copy {
+  padding: .55em 1.5em .45em;
+  cursor: pointer;
+  background-color: $color-lilac;
+  color: $color-white;
+    &:hover {
+      color: $color-aubergine;
+    }
+}
+
+.share__copy + span {
+  margin-left: 2em;
+  color: $color-blue;
+}
+
+@media screen and (max-width: $mq-small) {
+  .share__modal {
+    height: 50%;
+  }
+
+  .share__modal h2 {
+    padding-top: 4em;
+  }
+}

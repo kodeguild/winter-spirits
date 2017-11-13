@@ -1,0 +1,47 @@
+
+.langs {
+  position: absolute;
+  top: 1.9em;
+  right: 2em;
+  z-index: $zIndex--1;
+  text-align: center;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  background-color: $color-lilac;
+    &:hover {
+      box-shadow: 6px 6px 2px $color-lilacDark;
+    }
+}
+
+.langs .lang__link {
+  color: $color-white;
+  line-height: 2.4;
+  width: 38px;
+  display: inline-block;
+  visibility: hidden;
+  opacity: 0;
+  transform: matrix(1, 0, 0, 1, 10, 0);
+  position: absolute;
+  transition: .1s ease-in;
+    &:hover {
+      color: $color-blue;
+    }
+}
+
+.langs .lang--current {
+  position: absolute;
+  right: 2px;
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+    &:hover {
+      color: $color-porcelain;
+    }
+}
+
+.langs.open > .lang__link {
+  visibility: inherit;
+  opacity: 1;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
