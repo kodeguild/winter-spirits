@@ -40,7 +40,9 @@ __Please, open an issue "*SomeLanguage* localization" before you start, so that 
 
 __Three steps__ for creating a full localization:
 __1__. Translate general [website strings](/src/data/locales).
+
 __2__. Add *42 (+1) [fortune cookies](/src/data/cookies) in the chosen language. These may be some inspirational phrases, uplifting quotes or wise proverbs — anything you'd expect to find in a fortune cookie. A cookie shouldn't be longer than 105 characters. The first (0) cookie should be test cookie, it won't be displayed to the user, but you can still write something nice there.
+
 __3__. Add 12 [extracts](/src/data/quotes) from literature about Christmas, New Year, winter in the chosen language. Any genre (except may be poetry?), any author. Something kind, humorous, text that warms heart and makes you smile. __This is probably the most time-consuming part__, finding good winterish extracts isn't easy.
 
 After that, the only thing left is to add your lang to [main.js](/src/main.js) file.
