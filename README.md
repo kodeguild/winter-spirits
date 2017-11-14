@@ -39,6 +39,7 @@ If you'd like to provide translation and content in another language, read on.
 __Please, open an issue "*SomeLanguage* localization" before you start, so that others know you're working on it, and for further collaboration.__
 
 __Three steps__ for creating a full localization:
+
 __1__. Translate general [website strings](/src/data/locales).
 
 __2__. Add *42 (+1) [fortune cookies](/src/data/cookies) in the chosen language. These may be some inspirational phrases, uplifting quotes or wise proverbs — anything you'd expect to find in a fortune cookie. A cookie shouldn't be longer than 105 characters. The first (0) cookie should be test cookie, it won't be displayed to the user, but you can still write something nice there.
