@@ -58,18 +58,14 @@
         const title = encodeURI(text).replace(/%20/g, '+');
         const path = this.validateProtocol(pod);
 
-        if (service === 'diaspora') {
+        if (service === 'diaspora' || 'friendica' || 'socialhome') {
           window.open(`${path}/bookmarklet?url=${link}&title=${title}`);
         } else if (service === 'gnu_social') {
           window.open(`${path}/notice/new?status_textarea=${title}&${link}`);
         } else if (service === 'mastodon') {
           window.open(`${path}/share?text=${title}&${link}`);
-        } else if (service === 'friendica') {
-          window.open(`${path}/bookmarklet?url=${link}&title=${title}`);
         } else if (service === 'hubzilla') {
           window.open(`${path}/rpost?f=&url=${link}&title=${title}`);
-        } else if (service === 'socialhome') {
-          window.open(`${path}/bookmarklet?url=${link}&title=${title}`);
         }
       },
       validateProtocol(url) { // If url was typed without https://, add it
