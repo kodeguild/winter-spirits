@@ -7,16 +7,27 @@
         <img src="../assets/images/image-1.jpg" alt="hero image">
       </div>
       <a class="link-cookies font-sec" href="/"> {{ $t('back') }} </a>
+      <div v-if="snow">
+        <div class="snow">
+          <div class="snow-1"></div>
+          <div class="snow-2"></div>
+          <div class="snow-3"></div>
+          <div class="snow-4"></div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
 
 <script>
-  export default {
-    methods: {
-      imagePath() {
-        return require('../assets/images/cookies-bg.jpg');
-      }
+import snow from '@/mixins/snow';
+
+export default {
+  mixins: [snow],
+  methods: {
+    imagePath() {
+      return require('../assets/images/cookies-bg.jpg');
     }
   }
+}
 </script>
