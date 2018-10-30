@@ -5,7 +5,7 @@
 
 Let Winter Spirits win your heart, and enjoy the season to the fullest extent!
 
-[winterspirits.win](https://winterspirits.win)
+[winterspirits demo](https://winterspirits.kodeguild.com)
 
 ### Stack
 - Vue.js 2
